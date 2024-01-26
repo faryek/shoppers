@@ -3,7 +3,7 @@
     <div class="row" v-for="i in 3" :key="i">
       <CardBlock v-for="prop in items.slice((i - 1) * 4, (i - 1) * 4 + 4)" :key="prop" :name="prop.title"
         :img="prop.image" :price="prop.price" :category="prop.category" :rate="prop.rating.rate"
-        @click="$emit('clicked', prop.id)"></CardBlock>
+        @clicker="$emit('clicked', prop.id)"></CardBlock>
     </div>
   </div>
 </template>

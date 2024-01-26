@@ -1,6 +1,6 @@
 <template>
-  <MainPage v-show="main" @toGeneral="main = true; cart = false" @toCart="main = false; cart = true"></MainPage>
-  <ShoppingCartPage v-show="cart" @toGeneral="main = true; cart = false" @toCart="main = false; cart = true"></ShoppingCartPage>
+  <div v-show="main"><MainPage @toGeneral="main = true; cart = false" @toCart="main = false; cart = true"></MainPage></div>
+  <div v-show="cart"><ShoppingCartPage @toGeneral="main = true; cart = false" @toCart="main = false; cart = true"></ShoppingCartPage></div>
 </template>
 
 <script>
@@ -17,6 +17,10 @@ export default {
       main: true,
       cart: false
     }
+  },
+  mounted () {
+    console.log(this.main)
+    console.log(this.cart)
   }
 }
 </script>

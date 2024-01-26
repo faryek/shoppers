@@ -8,13 +8,11 @@
 <script>
 import HeaderBlock from './HeaderBlock.vue'
 import FooterBlock from './FooterBlock.vue'
-// import PageBlock from './PageBlock.vue'
 export default {
   name: 'ShoppingCartPage',
   components: {
     HeaderBlock,
     FooterBlock
-    // PageBlock
   },
   data () {
     return {
