@@ -35,9 +35,10 @@ h2{
 .card-top{
   padding-top: 1vw;
   padding-left: 10%;
+  padding-right: 10%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
 }
 
 .card-top p{
@@ -45,23 +46,25 @@ h2{
 }
 
 .card-mid{
-  padding-left: 2vw;
+  padding-left: 10%;
+  padding-right: 10%;
   display: flex;
   flex-direction: row;
-  width: 48vw;
+  width: 80%;
   gap: 1vw;
 }
 
 .card-mid p{
   font-size: 12pt;
+  width: 70%;
 }
 
 .card-bot{
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 80%;
   justify-content: space-between;
 }
 
