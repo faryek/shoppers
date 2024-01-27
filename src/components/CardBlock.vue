@@ -11,7 +11,7 @@
         <p>{{counter}}</p>
         <button @click="counter++">+</button>
       </div>
-      <button class="adder" @click="$emit('add', counter); counter = 0">add to cart</button>
+      <button class="adder" @click="$emit('add', counter)">add to cart</button>
     </div>
     <div class="lower">
       <p style="text-align: left;">{{category}}</p>

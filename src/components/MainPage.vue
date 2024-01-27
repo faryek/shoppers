@@ -11,7 +11,7 @@
         <button v-for="n in btns" :key="n" v-text="n.btnText" :class="['btn', { active: currentPage === n.btnClass }]"
           v-show="len == 10" @click="swap(n.btnText, n.btnClass)"></button>
       </div>
-      <PageBlock class="page" id="1" :items="all_items.slice(0, len)" v-if="page == 1" @clicked="showDesc">
+      <PageBlock class="page" id="1" :items="all_items.slice(0, len)" v-if="page == 1" @clicked="showDesc" @count="(counted, prop) => {$emit('add', counted, prop)}">
       </PageBlock>
       <PageBlock class="page" id="2" :items="all_items.slice(len, all_items.lenght)" v-if="page == 2 && len == 10"
         @clicked="showDesc"></PageBlock>
@@ -44,6 +44,7 @@ export default {
       currentPage: 'btn1',
       len: 0,
       mask: false,
+      sel_item: {},
       showCardDesc: false,
       btns: [
         {
@@ -101,6 +102,14 @@ export default {
         }
       }
     }
+    // add (a, id) {
+    //   this.counter = a
+    //   for (let i = 0; i < this.all_items.length; i++) {
+    //     if (this.all_items[i].id === id) {
+    //       this.descCard = this.all_items[i]
+    //     }
+    //   }
+    // }
   },
   created () {
     this.getItems()
